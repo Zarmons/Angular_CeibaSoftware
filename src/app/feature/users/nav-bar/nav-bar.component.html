@@ -1,0 +1,22 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
+-->
+<div class="menu">
+  <ul class="menu-item">
+    <li>
+      <img src="../../../../assets/images/exit.svg" (click)="logout()">
+      <a class="mr-0" id="nav-bar__btn-logout" (click)="logout()">Salir</a>
+    </li>
+    <div class ="vertical"></div>
+    <li>
+      <img src="../../../../assets/images/create-user.svg" routerLink="create">
+      <a class="mr-0" id="nav-bar__btn-create-user" routerLink="create">Crear usuario</a>
+    </li>
+    <div class ="vertical"></div>
+    <li>
+      <img src="../../../../assets/images/list-user.svg" routerLink="list">
+      <a class="mr-0" id="nav-bar__btn-list-user" routerLink="list">Listar usuario</a>
+    </li>
+  </ul>
+</div>

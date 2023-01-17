@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/h8k-design/lib/index.scss";
+
+:root {
+
+}
+
+body{
+  background: linear-gradient(104.03deg, #008d9d -24.76%, #004a51 100%, #004a51 100%);
+}
+
+.fondo-list {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  z-index: -1;
+}

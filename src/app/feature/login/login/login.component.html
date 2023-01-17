@@ -1,0 +1,51 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+<img src="../../../../assets/images/Vector 38.svg" class="fondo">
+<form [formGroup]="loginForm" (submit)="sendLoginForm()">
+  <div class="login-body">
+    <div class="login-wrapper">
+      <div class="card" style="background: rgba(255, 255, 255, 0.6); box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);  border-radius: 20px; padding: 33px">
+        <div class="layout-logo"></div>
+        <div class ="vertical"></div>
+        <div class="layout-from">
+          <h2 class="mt-0 mb-30" style="color: #004A51; background-color: none; text-align: center">
+            Bienvenido!
+          </h2>
+
+          <div class="mb-30">
+            <label>
+              <input id="login__email" type="text" class="white large" [class.error]="emailInvalid"
+                placeholder="Correo electronico" formControlName="email" />
+              <p *ngIf="emailRequired" id="login__email-error" class="form-hint error-text">
+                Email is required
+              </p>
+              <p *ngIf="emailMinLength" id="login__email-error" class="form-hint error-text">
+                The minimum of characters will be 8
+              </p>
+            </label>
+          </div>
+
+          <div class="mb-30">
+            <label>
+              <input id="login__password" type="password" class="white large" [class.error]="passwordInvalid"
+                placeholder="Contraseña" formControlName="password" />
+              <p *ngIf="passwordRequired" id="login__password-error" class="form-hint error-text">
+                Password is required
+              </p>
+              <p *ngIf="passwordMinLength" id="login__password-error" name="inputPasswordError"
+                class="form-hint error-text">
+                The minimum of characters will be 8
+              </p>
+            </label>
+          </div>
+
+          <div class="layout-row align-items-start justify-content-center">
+            <button id="login__btn-login" name="btnLogin" type="submit" >Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
